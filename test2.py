@@ -37,7 +37,7 @@ try:
         # If the PIR is triggered
         if currentstate == 1 and previousstate == 0:
 
-            print("Motion detected!")
+            print("Touch detected!")
 
             # Your IFTTT URL with event name, key and json parameters (values)
             r = requests.post('https://maker.ifttt.com/trigger/button_pressed/with/key/f42Co9SZokK9gEjdu_YVOW0rWekQsLiJHrfoD-GkLyx')
@@ -46,7 +46,7 @@ try:
             previousstate = 1
 
             #Wait 120 seconds before looping again
-            print("Waiting 120 seconds")
+            print("Sending Notification")
             time.sleep(10)
 
         # If the PIR has returned to ready state
