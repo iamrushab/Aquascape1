@@ -1,6 +1,11 @@
 import time
 import requests
+import RPi.GPIO as GPIO
 
+GPIO.setmode(GPIO.BCM)
+GPIO.setwarnings(False)
+pinpir = 17
+GPIO.setup(pinpir, GPIO.IN)
 
 print("Motion detected!")
 
